@@ -1,0 +1,11 @@
+<div class="contianer">
+    <div class="column-xs-12">
+        <p>display-details works!</p>
+        <button (click)="toggleDisplayText()">Display Details</button>
+        <p *ngIf="showText"> This is the magic display. It can appear and disappear.</p>
+        <hr>
+        <p *ngFor="let log of toggleLog; index as i"
+        [ngClass]="{markBlue:i >= 5}" [ngStyle]="{color : getLogTextColor(i)}"
+        >{{log}}</p>
+    </div>
+</div>
